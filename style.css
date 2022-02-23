@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.content{
+  margin-left: 5vw;
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: lightblue;
+}
+
+/* 2ns child in content */
+.content:nth-child(2){
+  background-color: plum;
+}
+
+.circle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: dotted;
+  border-width: thick;
+  border-radius: 15vw;
+  padding: 5vh;
+}
+
+.circle h2{
+  color: teal;
+  font-size: 2em;
+}
+
+.square{
+  background-color: white;
+  max-width: 50vw;
+  padding: 10vh;
+  border-radius: 10vw;
+}
+
+.square h1{ /*all h1 in square no matter how deep*/
+  color: salmon;
+}
+
+/* all circles directly in a square */
+.square > .circle{
+  border-style: solid;
+}
+
+/* all squares in content */
+.content .square{
+  align-self: center;
+}
+
+/* all paragraphs after an h1 */
+h1 + p{
+  line-height: 2em;
+}
+
+/* change color of h3 and all paragraphs directly in content */
+h3, .content > p{
+  color: darkorchid;
+  font-weight: bold;
+}
+
+/* style h2s that come after an h2 and also apply the same style to all h3s */
+h2 + h2, h3 {
+  letter-spacing: 3vw;
+  max-width: 100%;
+}
