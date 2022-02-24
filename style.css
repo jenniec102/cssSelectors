@@ -12,7 +12,7 @@
   background-color: lightblue;
 }
 
-/* 2ns child in content */
+/* 2nd child */
 .content:nth-child(2){
   background-color: plum;
 }
@@ -59,7 +59,7 @@ h1 + p{
   line-height: 2em;
 }
 
-/* change color of h3 and all paragraphs directly in content */
+/* change color of h3 AND all paragraphs directly in content */
 h3, .content > p{
   color: darkorchid;
   font-weight: bold;
